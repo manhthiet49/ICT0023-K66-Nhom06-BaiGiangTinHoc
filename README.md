@@ -19,5 +19,15 @@
 - Bootstrap 5
 - JavaScript
 - jQuery
-6. GitHub Pages
+6. Cấu trúc
+- /css
+- /js
+- /images
+- /data
+- index.html
+- lesson.html
+- quiz.html
+- glossary.html
+- contact.html
+7. GitHub Pages
 - Sẽ cập nhật sau khi hoàn thành.
