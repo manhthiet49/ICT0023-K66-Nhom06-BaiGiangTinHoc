@@ -10,9 +10,9 @@
 | Họ và tên | GitHub | Vai trò |
 |------------|---------|----------|
 | Đinh Mạnh Thiết | @manhthiet49 | Trưởng nhóm |
-| Bùi Lục Huyền | @username | Thành viên |
-| Nguyễn Quỳnh Trang | @username | Thành viên |
-| Phạm Thị Thúy | @username | Thành viên |
+| Bùi Lục Huyền | @huyenblk66sptin-glitch | Thành viên |
+| Nguyễn Quỳnh Trang | @thuyptk66sptin | Thành viên |
+| Phạm Thị Thúy | @trangnqk66sptin-stack | Thành viên |
 5. Công nghệ sử dụng
 - HTML5
 - CSS3
