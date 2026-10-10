@@ -3,6 +3,6 @@
 2. Mã tham khảo
 - Chưa sử dụng.
 3. Ảnh và dữ liệu
-- Chưa sử dụng.
+- Đã sử dụng.
 4. Công cụ AI
-- Chưa sử dụng.
+- Sử dụng chat GPT để tạo ảnh AI.
