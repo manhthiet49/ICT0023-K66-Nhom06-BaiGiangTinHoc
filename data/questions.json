@@ -1,0 +1,22 @@
+[
+  {
+    "question": "Đâu là hành vi đúng khi tham gia môi trường số?",
+    "options": [
+      "Chia sẻ tin giả",
+      "Tôn trọng bản quyền",
+      "Tiết lộ mật khẩu",
+      "Xúc phạm người khác"
+    ],
+    "answer": 1
+  },
+  {
+    "question": "OTP là gì?",
+    "options": [
+      "Mã xác thực một lần",
+      "Virus máy tính",
+      "Tường lửa",
+      "Mạng xã hội"
+    ],
+    "answer": 0
+  }
+]
