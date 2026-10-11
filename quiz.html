@@ -7,6 +7,15 @@
 
     <title>Ôn tập - Chủ đề C</title>
 
+    <meta name="description"
+        content="Trắc nghiệm ôn tập Chủ đề C: Đạo đức, pháp luật và xã hội trong môi trường số.">
+
+    <meta name="keywords"
+        content="Trắc nghiệm, Tin học THPT, Chủ đề C, Công dân số">
+
+    <meta name="author"
+        content="Nhóm 6 - Trường Đại học Tây Bắc">
+
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
 
     <link rel="stylesheet"
@@ -17,260 +26,185 @@
 
 <body>
 
-    <nav class="navbar navbar-expand-lg navbar-dark bg-primary sticky-top">
+<nav class="navbar navbar-expand-lg navbar-dark bg-primary sticky-top">
 
-        <div class="container">
+    <div class="container">
 
-            <a class="navbar-brand fw-bold" href="index.html">
-                <i class="bi bi-laptop"></i>
-                Chủ đề C
-            </a>
+        <a class="navbar-brand fw-bold" href="index.html">
+            <i class="bi bi-laptop"></i>
+            Chủ đề C
+        </a>
 
-            <button class="navbar-toggler"
-                type="button"
-                data-bs-toggle="collapse"
-                data-bs-target="#menu">
+        <button class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#menu">
 
-                <span class="navbar-toggler-icon"></span>
+            <span class="navbar-toggler-icon"></span>
 
-            </button>
+        </button>
 
-            <div class="collapse navbar-collapse" id="menu">
+        <div class="collapse navbar-collapse" id="menu">
 
-                <ul class="navbar-nav ms-auto">
+            <ul class="navbar-nav ms-auto">
 
-                    <li class="nav-item">
-                        <a class="nav-link" href="index.html">Trang chủ</a>
-                    </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="index.html">Trang chủ</a>
+                </li>
 
-                    <li class="nav-item">
-                        <a class="nav-link" href="lesson.html">Bài giảng</a>
-                    </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="lesson.html">Bài giảng</a>
+                </li>
 
-                    <li class="nav-item">
-                        <a class="nav-link active" href="quiz.html">Ôn tập</a>
-                    </li>
+                <li class="nav-item">
+                    <a class="nav-link active" href="quiz.html">Ôn tập</a>
+                </li>
 
-                    <li class="nav-item">
-                        <a class="nav-link" href="glossary.html">Thuật ngữ</a>
-                    </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="glossary.html">Thuật ngữ</a>
+                </li>
 
-                    <li class="nav-item">
-                        <a class="nav-link" href="contact.html">Liên hệ</a>
-                    </li>
-
-                </ul>
-
-            </div>
-
-        </div>
-
-    </nav>
-
-    <header class="bg-primary text-white text-center py-5">
-
-        <div class="container">
-
-            <h1 class="fw-bold">Trắc nghiệm ôn tập</h1>
-
-            <p class="lead">
-                Chủ đề C: Đạo đức, pháp luật và xã hội trong môi trường số
-            </p>
-
-            <img src="images/banner.jpg"
-                class="img-fluid rounded shadow mt-3"
-                alt="Banner">
-
-        </div>
-
-    </header>
-
-    <section class="container py-5">
-
-        <div class="alert alert-info">
-
-            <h4>Hướng dẫn làm bài</h4>
-
-            <ul class="mb-0">
-
-                <li>Đọc kỹ từng câu hỏi.</li>
-
-                <li>Chọn một đáp án đúng nhất.</li>
-
-                <li>Nhấn nút <strong>Nộp bài</strong> sau khi hoàn thành.</li>
-
-                <li>Có thể nhấn <strong>Làm lại</strong> để chọn lại đáp án.</li>
+                <li class="nav-item">
+                    <a class="nav-link" href="contact.html">Liên hệ</a>
+                </li>
 
             </ul>
 
         </div>
 
-    </section>
+    </div>
+
+</nav>
+
+<header class="bg-primary text-white text-center py-5">
+
+    <div class="container">
+
+        <h1 class="display-5 fw-bold">
+            Trắc nghiệm ôn tập
+        </h1>
+
+        <p class="lead">
+            Chủ đề C: Đạo đức, pháp luật và xã hội trong môi trường số
+        </p>
+
+        <img src="images/banner.jpg"
+            class="img-fluid rounded shadow mt-3"
+            alt="Banner Chủ đề C">
+
+    </div>
+
+</header>
+
+<section class="container py-5">
+
+    <div class="alert alert-info shadow-sm">
+
+        <h4>
+            <i class="bi bi-info-circle"></i>
+            Hướng dẫn làm bài
+        </h4>
+
+        <ul class="mb-0">
+
+            <li>Đọc kỹ từng câu hỏi.</li>
+
+            <li>Chỉ chọn một đáp án đúng.</li>
+
+            <li>Nhấn <strong>Nộp bài</strong> để xem kết quả.</li>
+
+            <li>Nhấn <strong>Làm lại</strong> để thực hiện lại bài kiểm tra.</li>
+
+        </ul>
+
+    </div>
+
+</section>
+
 <section class="container pb-5">
 
-        <h2 class="text-primary mb-4">Câu hỏi ôn tập</h2>
+    <h2 class="text-primary mb-4">
+        Câu hỏi ôn tập
+    </h2>
 
-        <form>
+    <form id="quizForm">
 
-            <div class="card shadow-sm mb-4">
-
-                <div class="card-body">
-
-                    <h5>Câu 1. Công dân số cần làm gì?</h5>
-
-                    <div class="form-check">
-                        <input class="form-check-input" type="radio" name="q1">
-                        <label class="form-check-label">
-                            Chia sẻ thông tin cá nhân cho mọi người.
-                        </label>
-                    </div>
-
-                    <div class="form-check">
-                        <input class="form-check-input" type="radio" name="q1">
-                        <label class="form-check-label">
-                            Sử dụng Internet có trách nhiệm.
-                        </label>
-                    </div>
-
-                </div>
-
-            </div>
-
-            <div class="card shadow-sm mb-4">
-
-                <div class="card-body">
-
-                    <h5>Câu 2. Mật khẩu nên như thế nào?</h5>
-
-                    <div class="form-check">
-                        <input class="form-check-input" type="radio" name="q2">
-                        <label class="form-check-label">
-                            Dễ nhớ như 123456.
-                        </label>
-                    </div>
-
-                    <div class="form-check">
-                        <input class="form-check-input" type="radio" name="q2">
-                        <label class="form-check-label">
-                            Mạnh, có chữ, số và ký tự đặc biệt.
-                        </label>
-                    </div>
-
-                </div>
-
-            </div>
-
-            <div class="card shadow-sm mb-4">
-
-                <div class="card-body">
-
-                    <h5>Câu 3. Hành vi nào sau đây là đúng?</h5>
-
-                    <div class="form-check">
-                        <input class="form-check-input" type="radio" name="q3">
-                        <label class="form-check-label">
-                            Chia sẻ tin giả.
-                        </label>
-                    </div>
-
-                    <div class="form-check">
-                        <input class="form-check-input" type="radio" name="q3">
-                        <label class="form-check-label">
-                            Tôn trọng bản quyền.
-                        </label>
-                    </div>
-
-                </div>
-
-            </div>
-
-            <div class="card shadow-sm mb-4">
-
-                <div class="card-body">
-
-                    <h5>Câu 4. OTP là gì?</h5>
-
-                    <div class="form-check">
-                        <input class="form-check-input" type="radio" name="q4">
-                        <label class="form-check-label">
-                            Mã xác thực dùng một lần.
-</label>
-                    </div>
-
-                    <div class="form-check">
-                        <input class="form-check-input" type="radio" name="q4">
-                        <label class="form-check-label">
-                            Mật khẩu Wi-Fi.
-                        </label>
-                    </div>
-
-                </div>
-
-            </div>
-
-            <div class="card shadow-sm mb-4">
-
-                <div class="card-body">
-
-                    <h5>Câu 5. Nên làm gì để bảo vệ thông tin cá nhân?</h5>
-
-                    <div class="form-check">
-                        <input class="form-check-input" type="radio" name="q5">
-                        <label class="form-check-label">
-                            Chia sẻ mật khẩu cho bạn bè.
-                        </label>
-                    </div>
-
-                    <div class="form-check">
-                        <input class="form-check-input" type="radio" name="q5">
-                        <label class="form-check-label">
-                            Bật xác thực hai lớp.
-                        </label>
-                    </div>
-
-                </div>
-
-            </div>
-
-            <div class="text-center">
-
-                <button type="button" class="btn btn-primary me-2">
-                    <i class="bi bi-check-circle"></i>
-                    Nộp bài
-                </button>
-
-                <button type="reset" class="btn btn-outline-secondary">
-                    <i class="bi bi-arrow-clockwise"></i>
-                    Làm lại
-                </button>
-
-            </div>
-
-        </form>
-
-    </section>
-
-    <footer class="bg-dark text-white py-4">
-
-        <div class="container text-center">
-
-            <h5>Website bài giảng Tin học THPT</h5>
-
-            <p>Chủ đề C: Đạo đức, pháp luật và xã hội trong môi trường số.</p>
-
-            <p>Nhóm 6 - Trường Đại học Tây Bắc</p>
-
-            <p class="mb-0">
-                © 2026 Website bài giảng Tin học THPT. Mọi quyền được bảo lưu.
-            </p>
+        <div id="quizContainer">
 
         </div>
 
-    </footer>
+        <div class="text-center mt-4">
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+            <button type="button"
+                id="submitBtn"
+                class="btn btn-primary btn-lg me-2">
+
+                <i class="bi bi-check-circle"></i>
+                Nộp bài
+
+            </button>
+
+            <button type="reset"
+                id="resetBtn"
+                class="btn btn-outline-secondary btn-lg">
+
+                <i class="bi bi-arrow-clockwise"></i>
+                Làm lại
+
+            </button>
+
+        </div>
+
+    </form>
+
+    <div id="result"
+        class="alert alert-success mt-4 d-none">
+
+    </div>
+
+</section>
+
+<footer class="bg-dark text-white py-4">
+
+    <div class="container">
+
+        <div class="row">
+
+            <div class="col-md-6">
+
+                <h5>Website bài giảng Tin học THPT</h5>
+
+                <p>
+                    Chủ đề C: Đạo đức, pháp luật và xã hội trong môi trường số.
+                </p>
+
+            </div>
+
+            <div class="col-md-6 text-md-end">
+
+                <p>
+                    Thực hiện: Nhóm 6 - Trường Đại học Tây Bắc
+                </p>
+
+                <p>
+                    © 2026. Mọi quyền được bảo lưu.
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+<script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+
+<script src="js/script.js"></script>
 
 </body>
 
 </html>
-
+  
