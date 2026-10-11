@@ -1,33 +1,47 @@
-1. Website bài giảng Tin học THPT
-2. Chủ đề
-- Đạo đức, pháp luật và xã hội trong môi trường số
-3. Đối tượng sử dụng
-- Giáo viên và học sinh THPT
-4. Mục tiêu
-- Xây dựng website hỗ trợ giảng dạy và học tập về đạo đức, pháp luật và xã hội trong môi trường số.
-5. Thành viên
-
-| Họ và tên | GitHub | Vai trò |
-|------------|---------|----------|
-| Đinh Mạnh Thiết | @manhthiet49 | Trưởng nhóm |
-| Bùi Lục Huyền | @huyenblk66sptin-glitch | Thành viên |
-| Nguyễn Quỳnh Trang | @thuyptk66sptin | Thành viên |
-| Phạm Thị Thúy | @trangnqk66sptin-stack | Thành viên |
-5. Công nghệ sử dụng
+1. Website bài giảng Tin học THPT - Chủ đề C
+2. Giới thiệu
+Website hỗ trợ giáo viên và học sinh THPT học tập Chủ đề C: Đạo đức, pháp luật và xã hội trong môi trường số.
+3. Công nghệ sử dụng
 - HTML5
 - CSS3
 - Bootstrap 5
 - JavaScript
 - jQuery
-6. Cấu trúc
-- /css
-- /js
-- /images
-- /data
-- index.html
-- lesson.html
-- quiz.html
-- glossary.html
-- contact.html
-7. GitHub Pages
-- Sẽ cập nhật sau khi hoàn thành.
+- JSON
+4. Cấu trúc website
+- Trang chủ
+- Bài giảng
+- Ôn tập
+- Thuật ngữ
+- Liên hệ
+5. Các phiên bản
+a. v0.1-y-tuong
+- Xây dựng ý tưởng dự án.
+- Phân tích người dùng.
+- Thiết kế cấu trúc website.
+- Phân công nhiệm vụ.
+b. v0.2-html
+- Hoàn thành 5 trang HTML.
+- Hoàn thiện nội dung.
+- Hoàn thành menu điều hướng.
+- Thêm hình ảnh và bảng biểu.
+c. v0.3-giao-dien
+- Hoàn thiện CSS.
+- Responsive 375px / 768px / 1200px.
+- Banner.
+- Card.
+- Hover Effect.
+- Footer thống nhất.
+- Bootstrap Navbar.
+- Kiểm tra hiển thị ảnh.
+  . v0.4-tuong-tac
+- Thêm JavaScript.
+- Thêm questions.json.
+- Tạo bài trắc nghiệm.
+- Chấm điểm tự động.
+- Hiển thị kết quả.
+- Nút Làm lại.
+- Validation biểu mẫu.
+- Sử dụng jQuery.
+6. GitHub Pages
+- Link sẽ cập nhật sau
