@@ -17,7 +17,7 @@
 
 <body>
 
-    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary sticky-top">
 
         <div class="container">
 
@@ -27,6 +27,7 @@
             </a>
 
             <button class="navbar-toggler"
+                type="button"
                 data-bs-toggle="collapse"
                 data-bs-target="#menu">
 
@@ -70,13 +71,15 @@
 
         <div class="container">
 
-            <h1 class="fw-bold">
-                Trắc nghiệm ôn tập
-            </h1>
+            <h1 class="fw-bold">Trắc nghiệm ôn tập</h1>
 
             <p class="lead">
                 Chủ đề C: Đạo đức, pháp luật và xã hội trong môi trường số
             </p>
+
+            <img src="images/banner.jpg"
+                class="img-fluid rounded shadow mt-3"
+                alt="Banner">
 
         </div>
 
@@ -86,74 +89,159 @@
 
         <div class="alert alert-info">
 
-            <h4>Hướng dẫn</h4>
+            <h4>Hướng dẫn làm bài</h4>
 
             <ul class="mb-0">
 
-                <li>Đọc câu hỏi.</li>
+                <li>Đọc kỹ từng câu hỏi.</li>
 
-                <li>Chọn một đáp án đúng.</li>
+                <li>Chọn một đáp án đúng nhất.</li>
 
-                <li>Nhấn nút Nộp bài.</li>
+                <li>Nhấn nút <strong>Nộp bài</strong> sau khi hoàn thành.</li>
+
+                <li>Có thể nhấn <strong>Làm lại</strong> để chọn lại đáp án.</li>
 
             </ul>
 
         </div>
 
     </section>
+<section class="container pb-5">
 
-    <section class="container pb-5">
-
-        <h2 class="text-primary mb-4">
-            Câu hỏi
-        </h2>
+        <h2 class="text-primary mb-4">Câu hỏi ôn tập</h2>
 
         <form>
 
-            <div class="mb-4">
+            <div class="card shadow-sm mb-4">
 
-                <h5>Câu 1. Công dân số cần làm gì?</h5>
+                <div class="card-body">
 
-                <div class="form-check">
-                    <input class="form-check-input" type="radio" name="q1">
-                    <label class="form-check-label">
-                        Chia sẻ thông tin cá nhân cho mọi người.
-                    </label>
-                </div>
+                    <h5>Câu 1. Công dân số cần làm gì?</h5>
 
-                <div class="form-check">
-                    <input class="form-check-input" type="radio" name="q1">
-                    <label class="form-check-label">
-                        Sử dụng Internet có trách nhiệm.
-                    </label>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="q1">
+                        <label class="form-check-label">
+                            Chia sẻ thông tin cá nhân cho mọi người.
+                        </label>
+                    </div>
+
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="q1">
+                        <label class="form-check-label">
+                            Sử dụng Internet có trách nhiệm.
+                        </label>
+                    </div>
+
                 </div>
 
             </div>
 
-            <div class="mb-4">
+            <div class="card shadow-sm mb-4">
 
-                <h5>Câu 2. Mật khẩu nên như thế nào?</h5>
+                <div class="card-body">
 
-                <div class="form-check">
-                    <input class="form-check-input" type="radio" name="q2">
-                    <label class="form-check-label">
-                        Dễ nhớ như 123456.
-                    </label>
+                    <h5>Câu 2. Mật khẩu nên như thế nào?</h5>
+
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="q2">
+                        <label class="form-check-label">
+                            Dễ nhớ như 123456.
+                        </label>
+                    </div>
+
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="q2">
+                        <label class="form-check-label">
+                            Mạnh, có chữ, số và ký tự đặc biệt.
+                        </label>
+                    </div>
+
                 </div>
 
-                <div class="form-check">
-                    <input class="form-check-input" type="radio" name="q2">
-                    <label class="form-check-label">
-                        Mạnh và khó đoán.
-                    </label>
+            </div>
+
+            <div class="card shadow-sm mb-4">
+
+                <div class="card-body">
+
+                    <h5>Câu 3. Hành vi nào sau đây là đúng?</h5>
+
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="q3">
+                        <label class="form-check-label">
+                            Chia sẻ tin giả.
+                        </label>
+                    </div>
+
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="q3">
+                        <label class="form-check-label">
+                            Tôn trọng bản quyền.
+                        </label>
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="card shadow-sm mb-4">
+
+                <div class="card-body">
+
+                    <h5>Câu 4. OTP là gì?</h5>
+
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="q4">
+                        <label class="form-check-label">
+                            Mã xác thực dùng một lần.
+</label>
+                    </div>
+
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="q4">
+                        <label class="form-check-label">
+                            Mật khẩu Wi-Fi.
+                        </label>
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="card shadow-sm mb-4">
+
+                <div class="card-body">
+
+                    <h5>Câu 5. Nên làm gì để bảo vệ thông tin cá nhân?</h5>
+
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="q5">
+                        <label class="form-check-label">
+                            Chia sẻ mật khẩu cho bạn bè.
+                        </label>
+                    </div>
+
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="q5">
+                        <label class="form-check-label">
+                            Bật xác thực hai lớp.
+                        </label>
+                    </div>
+
                 </div>
 
             </div>
 
             <div class="text-center">
 
-                <button type="button" class="btn btn-primary">
+                <button type="button" class="btn btn-primary me-2">
+                    <i class="bi bi-check-circle"></i>
                     Nộp bài
+                </button>
+
+                <button type="reset" class="btn btn-outline-secondary">
+                    <i class="bi bi-arrow-clockwise"></i>
+                    Làm lại
                 </button>
 
             </div>
@@ -170,8 +258,10 @@
 
             <p>Chủ đề C: Đạo đức, pháp luật và xã hội trong môi trường số.</p>
 
+            <p>Nhóm 6 - Trường Đại học Tây Bắc</p>
+
             <p class="mb-0">
-                Nhóm 6 - Trường Đại học Tây Bắc
+                © 2026 Website bài giảng Tin học THPT. Mọi quyền được bảo lưu.
             </p>
 
         </div>
@@ -183,3 +273,4 @@
 </body>
 
 </html>
+
