@@ -5,7 +5,7 @@ const result = document.getElementById("result");
 
 let questions = [];
 
-fetch("questions.json")
+fetch("data/questions.json")
 .then(response => response.json())
 .then(data => {
     questions = data;
