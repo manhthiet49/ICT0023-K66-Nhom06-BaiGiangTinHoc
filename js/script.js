@@ -1,32 +1,82 @@
+const quizForm = document.getElementById("quizForm");
 const submitBtn = document.getElementById("submitBtn");
 const resetBtn = document.getElementById("resetBtn");
 const result = document.getElementById("result");
 
-if (submitBtn) {
+let questions = [];
 
-    submitBtn.addEventListener("click", function () {
+fetch("questions.json")
+.then(response => response.json())
+.then(data => {
+    questions = data;
+    renderQuiz();
+})
+.catch(() => {
+    result.innerHTML =
+    `<div class="alert alert-danger">
+        Không tải được dữ liệu câu hỏi.
+    </div>`;
+});
 
-        const totalQuestions = 5;
+function renderQuiz(){
 
-        let score = 0;
+    const container = document.getElementById("quizContainer");
 
-        for (let i = 1; i <= totalQuestions; i++) {
+    let html = "";
 
-            const answer = document.querySelector(
-                `input[name="q${i}"]:checked`
-            );
+    questions.forEach((q,index)=>{
 
-            if (!answer) {
+        html += `
+        <div class="card shadow-sm mb-4">
+            <div class="card-body">
 
-                result.className = "alert alert-warning mt-4";
+                <h5>${index+1}. ${q.question}</h5>
 
-                result.innerHTML =
-                    `<strong>Bạn chưa trả lời câu ${i}.</strong>`;
+                ${q.answers.map((ans,i)=>`
 
-                return;
-            }
+                    <div class="form-check">
 
-            if (answer.value === "1") {
+                        <input
+                        class="form-check-input"
+                        type="radio"
+                        name="q${index}"
+                        value="${i}">
+
+                        <label class="form-check-label">
+
+                            ${ans}
+
+                        </label>
+
+                    </div>
+
+                `).join("")}
+
+            </div>
+        </div>
+        `;
+
+    });
+
+    container.innerHTML = html;
+
+}
+
+submitBtn.addEventListener("click",()=>{
+
+    let score=0;
+
+    let answered=0;
+
+    questions.forEach((q,index)=>{
+
+        const choose=document.querySelector(`input[name=q${index}]:checked`);
+
+        if(choose){
+
+            answered++;
+
+            if(Number(choose.value)===q.correct){
 
                 score++;
 
@@ -34,159 +84,79 @@ if (submitBtn) {
 
         }
 
-        let message = "";
+    });
 
-        let color = "";
+    if(answered!==questions.length){
 
-        if (score === 5) {
+        result.innerHTML=`
+        <div class="alert alert-warning">
+            Bạn chưa trả lời hết câu hỏi.
+        </div>`;
 
-            color = "success";
+        return;
 
-            message = "Xuất sắc! Bạn đã nắm vững kiến thức.";
+    }
 
-        }
+    let level="";
 
-        else if (score >= 3) {
+    if(score===questions.length){
 
-            color = "info";
+        level="Xuất sắc";
 
-            message = "Bạn đã hiểu phần lớn nội dung bài học.";
+    }else if(score>=4){
 
-        }
+        level="Tốt";
 
-        else {
+    }else if(score>=3){
 
-            color = "danger";
+        level="Đạt";
 
-            message = "Bạn nên xem lại bài giảng trước khi làm lại.";
+    }else{
 
-        }
+        level="Cần ôn tập thêm";
 
-        result.className = `alert alert-${color} mt-4`;
+    }
 
-        result.innerHTML = `
-            <h4>Kết quả bài làm</h4>
-            <hr>
-            <h3>${score}/5 điểm</h3>
-            <p>${message}</p>
-        `;
+    result.innerHTML=`
+
+    <div class="alert alert-success mt-4">
+
+        <h4>Kết quả</h4>
+
+        <p><strong>Điểm:</strong> ${score}/${questions.length}</p>
+
+        <p><strong>Đánh giá:</strong> ${level}</p>
+
+    </div>
+
+    `;
+
+    result.scrollIntoView({
+
+        behavior:"smooth",
+        block:"center"
 
     });
 
-}
+});
 
+resetBtn.addEventListener("click",()=>{
 
+    result.innerHTML="";
 
-if (resetBtn) {
+});
 
-    resetBtn.addEventListener("click", function () {
-
-        result.className = "d-none";
-
-        result.innerHTML = "";
-
-    });
-
-}
-
-const contactForm = document.getElementById("contactForm");
-
-if (contactForm) {
-
-    contactForm.addEventListener("submit", function (e) {
-
-        e.preventDefault();
-
-        const name = document.getElementById("name").value.trim();
-
-        const email = document.getElementById("email").value.trim();
-
-        const message = document.getElementById("message").value.trim();
-
-        if (name === "") {
-
-            alert("Vui lòng nhập họ và tên.");
-
-            return;
-
-        }
-
-        if (email === "") {
-
-            alert("Vui lòng nhập email.");
-
-            return;
-
-        }
-
-        if (!email.includes("@")) {
-
-            alert("Email không hợp lệ.");
-
-            return;
-
-        }
-
-        if (message.length < 10) {
-
-            alert("Nội dung góp ý quá ngắn.");
-
-            return;
-
-        }
-
-        alert("Gửi góp ý thành công!");
-
-        contactForm.reset();
-
-    });
-
-}
-
-const searchInput = document.getElementById("search");
-
-if (searchInput) {
-
-    searchInput.addEventListener("keyup", function () {
-
-        const keyword = this.value.toLowerCase();
-
-        const cards = document.querySelectorAll(".term-card");
-
-        cards.forEach(function (card) {
-
-            const text = card.innerText.toLowerCase();
-
-            if (text.includes(keyword)) {
-
-                card.style.display = "block";
-
-            }
-
-            else {
-
-                card.style.display = "none";
-
-            }
-
-        });
-
-    });
-
-}
-
-
-$(document).ready(function () {
+$(function(){
 
     $(".card").hover(
 
-        function () {
+        function(){
 
             $(this).addClass("shadow-lg");
 
         },
 
-        function () {
+        function(){
 
             $(this).removeClass("shadow-lg");
 
