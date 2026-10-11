@@ -1,22 +1,56 @@
 [
-  {
-    "question": "Đâu là hành vi đúng khi tham gia môi trường số?",
-    "options": [
-      "Chia sẻ tin giả",
-      "Tôn trọng bản quyền",
-      "Tiết lộ mật khẩu",
-      "Xúc phạm người khác"
-    ],
-    "answer": 1
-  },
-  {
-    "question": "OTP là gì?",
-    "options": [
-      "Mã xác thực một lần",
-      "Virus máy tính",
-      "Tường lửa",
-      "Mạng xã hội"
-    ],
-    "answer": 0
-  }
+    {
+        "id": 1,
+        "question": "Công dân số cần làm gì?",
+        "options": [
+            "Chia sẻ thông tin cá nhân cho mọi người.",
+            "Sử dụng Internet có trách nhiệm."
+        ],
+        "correct": 1
+    },
+    {
+        "id": 2,
+        "question": "Mật khẩu nên như thế nào?",
+        "options": [
+            "Dễ nhớ như 123456.",
+            "Mạnh, có chữ, số và ký tự đặc biệt."
+        ],
+        "correct": 1
+    },
+    {
+        "id": 3,
+        "question": "Hành vi nào sau đây là đúng?",
+        "options": [
+            "Chia sẻ tin giả.",
+            "Tôn trọng bản quyền."
+        ],
+        "correct": 1
+    },
+    {
+        "id": 4,
+        "question": "OTP là gì?",
+        "options": [
+            "Mã xác thực dùng một lần.",
+            "Mật khẩu Wi-Fi."
+        ],
+        "correct": 0
+    },
+    {
+        "id": 5,
+        "question": "Nên làm gì để bảo vệ thông tin cá nhân?",
+        "options": [
+            "Chia sẻ mật khẩu cho bạn bè.",
+            "Bật xác thực hai lớp."
+        ],
+        "correct": 1
+    },
+    {
+        "id": 6,
+        "question": "Đâu là hành vi sử dụng Internet an toàn?",
+        "options": [
+            "Nhấp vào mọi liên kết lạ.",
+            "Kiểm tra nguồn thông tin trước khi chia sẻ."
+        ],
+        "correct": 1
+    }
 ]
