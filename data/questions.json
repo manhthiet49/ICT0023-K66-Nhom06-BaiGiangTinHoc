@@ -1,62 +1,102 @@
 [
   {
-    "id": 1,
-    "question": "Công dân số cần làm gì?",
-    "answers": [
-      "Chia sẻ thông tin cá nhân cho mọi người.",
-      "Sử dụng Internet có trách nhiệm."
+    "question": "1. Đạo đức số là gì?",
+    "options": [
+      "Sử dụng Internet có trách nhiệm và văn minh",
+      "Chơi game nhiều hơn",
+      "Đăng mọi thông tin lên mạng",
+      "Sử dụng mạng không cần quy tắc"
     ],
-    "correct": 1,
-    "explain": "Công dân số cần sử dụng Internet có trách nhiệm và tuân thủ các quy định."
+    "answer": 0
   },
   {
-    "id": 2,
-    "question": "Mật khẩu nên như thế nào?",
-    "answers": [
-      "Dễ nhớ như 123456.",
-      "Mạnh, có chữ, số và ký tự đặc biệt."
+    "question": "2. Hành vi nào sau đây thể hiện văn hóa trên môi trường số?",
+    "options": [
+      "Bình luận lịch sự và tôn trọng người khác",
+      "Chia sẻ tin giả",
+      "Xúc phạm người khác",
+      "Đăng thông tin sai sự thật"
     ],
-    "correct": 1,
-    "explain": "Mật khẩu mạnh giúp bảo vệ tài khoản và dữ liệu cá nhân."
+    "answer": 0
   },
   {
-    "id": 3,
-    "question": "Hành vi nào sau đây là đúng?",
-    "answers": [
-      "Chia sẻ tin giả.",
-      "Tôn trọng bản quyền."
+    "question": "3. Mã OTP dùng để làm gì?",
+    "options": [
+      "Xác thực tài khoản",
+      "Đổi tên tài khoản",
+      "Lưu mật khẩu",
+      "Tăng tốc Internet"
     ],
-    "correct": 1,
-    "explain": "Mỗi người cần tôn trọng bản quyền và không phát tán nội dung trái phép."
+    "answer": 0
   },
   {
-    "id": 4,
-    "question": "OTP là gì?",
-    "answers": [
-      "Mã xác thực dùng một lần.",
-      "Mật khẩu Wi-Fi."
+    "question": "4. Việc nào giúp bảo vệ thông tin cá nhân?",
+    "options": [
+      "Chia sẻ mật khẩu cho bạn bè",
+      "Sử dụng mật khẩu mạnh và xác thực hai lớp",
+      "Đăng công khai số điện thoại",
+      "Nhấp vào mọi liên kết lạ"
     ],
-    "correct": 0,
-    "explain": "OTP (One-Time Password) là mã xác thực chỉ sử dụng một lần."
+    "answer": 1
   },
   {
-    "id": 5,
-    "question": "Để bảo vệ thông tin cá nhân, bạn nên làm gì?",
-    "answers": [
-      "Chia sẻ mật khẩu cho bạn bè.",
-      "Bật xác thực hai lớp."
+    "question": "5. Tin giả là gì?",
+    "options": [
+      "Thông tin sai sự thật được lan truyền",
+      "Thông tin từ sách giáo khoa",
+      "Thông tin của giáo viên",
+      "Thông tin từ cơ quan nhà nước"
     ],
-    "correct": 1,
-    "explain": "Xác thực hai lớp giúp tăng cường bảo mật tài khoản."
+    "answer": 0
   },
   {
-    "id": 6,
-    "question": "Khi phát hiện thông tin chưa được kiểm chứng trên Internet, bạn nên làm gì?",
-    "answers": [
-      "Chia sẻ ngay cho mọi người.",
-      "Kiểm chứng trước khi chia sẻ."
+    "question": "6. Công dân số cần làm gì?",
+    "options": [
+      "Tuân thủ pháp luật khi sử dụng Internet",
+      "Phát tán virus",
+      "Vi phạm bản quyền",
+      "Đăng thông tin sai sự thật"
     ],
-    "correct": 1,
-    "explain": "Chỉ chia sẻ thông tin sau khi đã kiểm chứng để tránh lan truyền tin giả."
+    "answer": 0
+  },
+  {
+    "question": "7. Hành vi nào vi phạm pháp luật trên môi trường số?",
+    "options": [
+      "Chia sẻ phần mềm có bản quyền khi chưa được phép",
+      "Bảo vệ dữ liệu cá nhân",
+      "Tôn trọng quyền riêng tư",
+      "Kiểm chứng thông tin trước khi chia sẻ"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "8. Văn hóa số thể hiện qua hành động nào?",
+    "options": [
+      "Ứng xử lịch sự trên mạng",
+      "Nói xấu người khác",
+      "Đăng bình luận xúc phạm",
+      "Lan truyền tin đồn"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "9. Nếu nhận được liên kết lạ, bạn nên làm gì?",
+    "options": [
+      "Nhấp ngay để xem",
+      "Chia sẻ cho mọi người",
+      "Không mở và kiểm tra nguồn gửi",
+      "Đăng lên mạng xã hội"
+    ],
+    "answer": 2
+  },
+  {
+    "question": "10. Khi tham gia môi trường số, mỗi người cần có trách nhiệm gì?",
+    "options": [
+      "Tôn trọng người khác và tuân thủ pháp luật",
+      "Làm mọi điều mình thích",
+      "Đăng tải mọi thông tin cá nhân",
+      "Bỏ qua các quy định trên Internet"
+    ],
+    "answer": 0
   }
 ]
