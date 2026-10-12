@@ -1,604 +1,979 @@
 <!DOCTYPE html>
 <html lang="vi">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>Website bài giảng Tin học THPT - Chủ đề D</title>
 
-    <meta
-      name="description"
-      content="Website bài giảng Tin học THPT - Chủ đề D: Đạo đức, pháp luật và văn hóa trong môi trường số."
-    />
+    <meta name="description"
+        content="Website bài giảng Tin học THPT - Chủ đề D: Đạo đức, pháp luật và văn hóa trong môi trường số.">
 
-    <meta
-      name="keywords"
-      content="Tin học THPT, Chủ đề D, Đạo đức số, Pháp luật số, Văn hóa số, Công dân số"
-    />
+    <meta name="keywords"
+        content="Tin học THPT, Chủ đề D, Đạo đức số, Pháp luật số, Văn hóa số, Công dân số">
 
-    <meta name="author" content="Nhóm 6 - Trường Đại học Tây Bắc" />
+    <meta name="author"
+        content="Nhóm 6 - Trường Đại học Tây Bắc">
 
-    <link rel="icon" href="images/logo.png" />
+    <meta name="theme-color"
+        content="#0d6efd">
 
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-    />
+    <link rel="icon"
+        href="images/logo.png">
 
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
-    />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+        rel="stylesheet">
 
-    <link rel="stylesheet" href="css/style.css" />
-  </head>
+    <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
 
-  <body>
-    <nav
-      class="navbar navbar-expand-lg navbar-dark bg-primary sticky-top shadow"
-    >
-      <div class="container">
-        <a
-          class="navbar-brand d-flex align-items-center fw-bold"
-          href="index.html"
-        >
-          <img
-            src="images/logo.png"
-            alt="Logo"
-            width="45"
-            height="45"
-            class="rounded-circle me-2"
-          />
+    <link rel="stylesheet"
+        href="css/style.css">
+</head>
 
-          <span>Chủ đề D</span>
-        </a>
+<body>
 
-        <button
-          class="navbar-toggler"
-          type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#menu"
-        >
-          <span class="navbar-toggler-icon"></span>
-        </button>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary shadow sticky-top">
 
-        <div class="collapse navbar-collapse" id="menu">
-          <ul class="navbar-nav ms-auto">
-            <li class="nav-item">
-              <a class="nav-link active" href="index.html"> Trang chủ </a>
-            </li>
+        <div class="container">
 
-            <li class="nav-item">
-              <a class="nav-link" href="lesson.html"> Bài giảng </a>
-            </li>
+            <a class="navbar-brand d-flex align-items-center fw-bold"
+                href="index.html">
 
-            <li class="nav-item">
-              <a class="nav-link" href="quiz.html"> Ôn tập </a>
-            </li>
+                <img src="images/logo.png"
+                    alt="Logo"
+                    width="45"
+                    height="45"
+                    class="rounded-circle me-2">
 
-            <li class="nav-item">
-              <a class="nav-link" href="glossary.html"> Thuật ngữ </a>
-            </li>
+                <span>Chủ đề D</span>
 
-            <li class="nav-item">
-              <a class="nav-link" href="contact.html"> Liên hệ </a>
-            </li>
-          </ul>
+            </a>
+
+            <button class="navbar-toggler"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#menu">
+
+                <span class="navbar-toggler-icon"></span>
+
+            </button>
+
+            <div class="collapse navbar-collapse"
+                id="menu">
+
+                <ul class="navbar-nav ms-auto">
+
+                    <li class="nav-item">
+                        <a class="nav-link active"
+                            href="index.html">
+                            Trang chủ
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link"
+                            href="lesson.html">
+                            Bài giảng
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link"
+                            href="quiz.html">
+                            Ôn tập
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link"
+                            href="glossary.html">
+                            Thuật ngữ
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link"
+                            href="contact.html">
+                            Liên hệ
+                        </a>
+                    </li>
+
+                </ul>
+
+            </div>
+
         </div>
-      </div>
+
     </nav>
 
-    <header class="hero py-5">
-      <div class="container">
-        <div class="row align-items-center">
-          <div class="col-lg-6">
-            <h1 class="display-4 fw-bold">
-              Đạo đức, pháp luật và văn hóa
-              <br />
-              trong môi trường số
-            </h1>
+    <header class="hero-section text-white">
 
-            <p class="lead mt-4">
-              Website bài giảng Tin học THPT giúp học sinh tìm hiểu về đạo đức
-              số, pháp luật trên Internet, văn hóa ứng xử trong môi trường số,
-              bảo vệ thông tin cá nhân và trở thành công dân số có trách nhiệm.
-            </p>
+        <div class="container">
 
-            <div class="mt-4">
-              <a href="lesson.html" class="btn btn-warning btn-lg me-2">
-                <i class="bi bi-book"></i>
+            <div class="row align-items-center">
 
-                Khám phá bài học
-              </a>
+                <div class="col-lg-6">
 
-              <a href="quiz.html" class="btn btn-light btn-lg">
-                <i class="bi bi-pencil-square"></i>
+                    <span class="badge bg-warning text-dark mb-3 px-3 py-2">
+                        Website bài giảng Tin học THPT
+                    </span>
 
-                Ôn tập ngay
-              </a>
+                    <h1 class="display-4 fw-bold mb-4">
+
+                        Chủ đề D<br>
+
+                        Đạo đức, pháp luật và văn hóa trong môi trường số
+
+                    </h1>
+
+                    <p class="lead mb-4">
+
+                        Website giúp học sinh tìm hiểu các kiến thức về đạo đức số,
+                        pháp luật trên Internet, văn hóa ứng xử trong môi trường số,
+                        bảo vệ thông tin cá nhân và xây dựng kỹ năng trở thành công
+                        dân số có trách nhiệm.
+
+                    </p>
+
+                    <div class="d-flex flex-wrap gap-3">
+
+                        <a href="lesson.html"
+                            class="btn btn-warning btn-lg">
+
+                            <i class="bi bi-book-half"></i>
+
+                            Bắt đầu học
+
+                        </a>
+
+                        <a href="quiz.html"
+                            class="btn btn-outline-light btn-lg">
+
+                            <i class="bi bi-pencil-square"></i>
+
+                            Làm bài ôn tập
+
+                        </a>
+
+                    </div>
+
+                </div>
+
+                <div class="col-lg-6 text-center mt-5 mt-lg-0">
+
+                    <img src="images/banner.jpg"
+                        alt="Banner Chủ đề D"
+                        class="img-fluid rounded-4 shadow-lg">
+
+                </div>
+
             </div>
-          </div>
 
-          <div class="col-lg-6 text-center mt-4 mt-lg-0">
-            <img
-              src="images/banner.jpg"
-              alt="Banner"
-              class="img-fluid rounded shadow"
-            />
-          </div>
         </div>
-      </div>
+
     </header>
-
+     
     <section class="py-5 bg-white">
-      <div class="container">
-        <div class="row text-center">
-          <div class="col-6 col-md-3">
-            <h2 class="text-primary fw-bold">6</h2>
 
-            <p>Bài học</p>
-          </div>
+        <div class="container">
 
-          <div class="col-6 col-md-3">
-            <h2 class="text-success fw-bold">6</h2>
+            <div class="row text-center g-4">
 
-            <p>Câu hỏi</p>
-          </div>
+                <div class="col-6 col-md-3">
 
-          <div class="col-6 col-md-3">
-            <h2 class="text-danger fw-bold">10+</h2>
+                    <div class="counter-box shadow-sm">
 
-            <p>Thuật ngữ</p>
-          </div>
+                        <i class="bi bi-journal-bookmark-fill display-5 text-primary"></i>
 
-          <div class="col-6 col-md-3">
-            <h2 class="text-warning fw-bold">100%</h2>
+                        <h2 class="fw-bold mt-3">6</h2>
 
-            <p>Miễn phí</p>
-          </div>
+                        <p class="mb-0">Chuyên đề</p>
+
+                    </div>
+
+                </div>
+
+                <div class="col-6 col-md-3">
+
+                    <div class="counter-box shadow-sm">
+
+                        <i class="bi bi-question-circle-fill display-5 text-success"></i>
+
+                        <h2 class="fw-bold mt-3">10+</h2>
+
+                        <p class="mb-0">Câu hỏi ôn tập</p>
+
+                    </div>
+
+                </div>
+
+                <div class="col-6 col-md-3">
+
+                    <div class="counter-box shadow-sm">
+
+                        <i class="bi bi-bookmark-check-fill display-5 text-danger"></i>
+
+                        <h2 class="fw-bold mt-3">15+</h2>
+
+                        <p class="mb-0">Thuật ngữ</p>
+
+                    </div>
+
+                </div>
+
+                <div class="col-6 col-md-3">
+
+                    <div class="counter-box shadow-sm">
+
+                        <i class="bi bi-laptop-fill display-5 text-warning"></i>
+
+                        <h2 class="fw-bold mt-3">100%</h2>
+
+                        <p class="mb-0">Học trực tuyến</p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
         </div>
-      </div>
-    </section>
 
-    <section class="py-5">
-      <div class="container">
-        <div class="text-center mb-5">
-          <h2 class="fw-bold text-primary">Giới thiệu chủ đề</h2>
-
-          <p class="text-muted">
-            Chủ đề D trong chương trình Tin học THPT giúp học sinh hiểu về đạo
-            đức số, các quy định của pháp luật và văn hóa ứng xử trong môi
-            trường số. Qua đó hình thành kỹ năng sử dụng Internet an toàn, văn
-            minh và có trách nhiệm.
-          </p>
-        </div>
-
-        <div class="row g-4">
-          <div class="col-md-4">
-            <div class="card h-100 shadow-sm">
-              <div class="card-body text-center">
-                <i class="bi bi-shield-check display-4 text-primary"></i>
-
-                <h4 class="mt-3">An toàn số</h4>
-
-                <p>
-                  Bảo vệ tài khoản, dữ liệu cá nhân, phòng tránh các nguy cơ
-                  trên Internet.
-                </p>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-md-4">
-            <div class="card h-100 shadow-sm">
-              <div class="card-body text-center">
-                <i class="bi bi-people-fill display-4 text-success"></i>
-
-                <h4 class="mt-3">Công dân số</h4>
-
-                <p>
-                  Sử dụng công nghệ đúng mục đích, có trách nhiệm với bản thân
-                  và cộng đồng.
-                </p>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-md-4">
-            <div class="card h-100 shadow-sm">
-              <div class="card-body text-center">
-                <i class="bi bi-globe2 display-4 text-danger"></i>
-
-                <h4 class="mt-3">Văn hóa số</h4>
-
-                <p>
-                  Hình thành văn hóa ứng xử văn minh, lịch sự và tôn trọng người
-                  khác trên Internet.
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="bg-light py-5">
-      <div class="container">
-        <h2 class="text-center text-primary fw-bold mb-5">Mục tiêu bài học</h2>
-
-        <div class="row align-items-center">
-          <div class="col-lg-6">
-            <ul class="list-group shadow-sm">
-              <li class="list-group-item">✔ Hiểu khái niệm đạo đức số.</li>
-
-              <li class="list-group-item">
-                ✔ Hiểu các quy định của pháp luật trong môi trường số.
-              </li>
-
-              <li class="list-group-item">
-                ✔ Xây dựng văn hóa ứng xử văn minh trên Internet.
-              </li>
-
-              <li class="list-group-item">
-                ✔ Biết cách bảo vệ thông tin và dữ liệu cá nhân.
-              </li>
-
-              <li class="list-group-item">
-                ✔ Trở thành công dân số có trách nhiệm.
-              </li>
-            </ul>
-          </div>
-
-          <div class="col-lg-6 text-center mt-4 mt-lg-0">
-            <img
-              src="images/ethics.jpg"
-              class="img-fluid rounded shadow"
-              alt="Đạo đức số"
-            />
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="py-5">
-      <div class="container">
-        <h2 class="text-center text-primary fw-bold mb-5">Nội dung bài học</h2>
-
-        <div class="row g-4">
-          <div class="col-md-4">
-            <div class="card h-100 shadow-sm">
-              <div class="card-body">
-                <h5>1. Môi trường số</h5>
-
-                <p>
-                  Khái niệm môi trường số, vai trò của công nghệ số trong học
-                  tập, giao tiếp và cuộc sống.
-                </p>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-md-4">
-            <div class="card h-100 shadow-sm">
-              <div class="card-body">
-                <h5>2. Đạo đức số</h5>
-
-                <p>
-                  Hình thành ý thức ứng xử văn minh, trung thực, tôn trọng người
-                  khác khi sử dụng Internet.
-                </p>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-md-4">
-            <div class="card h-100 shadow-sm">
-              <div class="card-body">
-                <h5>3. Pháp luật trong môi trường số</h5>
-
-                <p>
-                  Các quy định của pháp luật về sử dụng Internet, bản quyền và
-                  quyền riêng tư.
-                </p>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-md-4">
-            <div class="card h-100 shadow-sm">
-              <div class="card-body">
-                <h5>4. Văn hóa ứng xử trên Internet</h5>
-
-                <p>
-                  Giao tiếp lịch sự, chia sẻ thông tin có trách nhiệm và xây
-                  dựng môi trường mạng tích cực.
-                </p>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-md-4">
-            <div class="card h-100 shadow-sm">
-              <div class="card-body">
-                <h5>5. Bảo vệ thông tin cá nhân</h5>
-
-                <p>
-                  Sử dụng mật khẩu mạnh, xác thực hai lớp, bảo vệ dữ liệu và tài
-                  khoản cá nhân.
-                </p>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-md-4">
-            <div class="card h-100 shadow-sm">
-              <div class="card-body">
-                <h5>6. Công dân số</h5>
-
-                <p>
-                  Xây dựng thói quen sử dụng công nghệ an toàn, hiệu quả và có
-                  trách nhiệm với cộng đồng.
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="bg-light py-5">
-      <div class="container">
-        <h2 class="text-center text-primary fw-bold mb-4">Video bài giảng</h2>
-
-        <p class="text-center text-muted mb-5">
-          Video giúp học sinh hiểu rõ hơn về đạo đức, pháp luật và văn hóa trong
-          môi trường số.
-        </p>
-
-        <div class="row justify-content-center">
-          <div class="col-lg-8">
-            <div class="ratio ratio-16x9 shadow rounded">
-              <iframe
-                src="https://www.youtube.com/embed/aqz-KE-bpKQ"
-                title="Video bài giảng"
-                allowfullscreen
-              >
-              </iframe>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="py-5">
-      <div class="container">
-        <h2 class="text-center text-primary fw-bold mb-5">
-          Câu hỏi thường gặp
-        </h2>
-
-        <div class="accordion" id="faq">
-          <div class="accordion-item">
-            <h2 class="accordion-header">
-              <button
-                class="accordion-button"
-                data-bs-toggle="collapse"
-                data-bs-target="#faq1"
-              >
-                Đạo đức số là gì?
-              </button>
-            </h2>
-
-            <div
-              id="faq1"
-              class="accordion-collapse collapse show"
-              data-bs-parent="#faq"
-            >
-              <div class="accordion-body">
-                Đạo đức số là các chuẩn mực ứng xử đúng đắn, trung thực và có
-                trách nhiệm khi tham gia môi trường số.
-              </div>
-            </div>
-          </div>
-
-          <div class="accordion-item">
-            <h2 class="accordion-header">
-              <button
-                class="accordion-button collapsed"
-                data-bs-toggle="collapse"
-                data-bs-target="#faq2"
-              >
-                Làm thế nào để bảo vệ thông tin cá nhân?
-              </button>
-            </h2>
-
-            <div
-              id="faq2"
-              class="accordion-collapse collapse"
-              data-bs-parent="#faq"
-            >
-              <div class="accordion-body">
-                Sử dụng mật khẩu mạnh, bật xác thực hai lớp, không chia sẻ mã
-                OTP và hạn chế cung cấp thông tin cá nhân trên các website không
-                đáng tin cậy.
-              </div>
-            </div>
-          </div>
-
-          <div class="accordion-item">
-            <h2 class="accordion-header">
-              <button
-                class="accordion-button collapsed"
-                data-bs-toggle="collapse"
-                data-bs-target="#faq3"
-              >
-                Văn hóa ứng xử trên Internet là gì?
-              </button>
-            </h2>
-
-            <div
-              id="faq3"
-              class="accordion-collapse collapse"
-              data-bs-parent="#faq"
-            >
-              <div class="accordion-body">
-                Là việc giao tiếp lịch sự, tôn trọng người khác, không phát tán
-                tin giả, không xúc phạm danh dự người khác và tuân thủ các quy
-                định của pháp luật khi tham gia môi trường số.
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="py-5 bg-primary text-white text-center">
-      <div class="container">
-        <h2 class="fw-bold">Hãy trở thành công dân số văn minh!</h2>
-
-        <p class="lead mt-3">
-          Cùng xây dựng môi trường số an toàn, văn minh, tôn trọng pháp luật và
-          lan tỏa những giá trị tích cực.
-        </p>
-
-        <a href="quiz.html" class="btn btn-warning btn-lg mt-3">
-          <i class="bi bi-pencil-square"></i>
-
-          Làm bài ôn tập
-        </a>
-      </div>
     </section>
 
     <section class="py-5 bg-light">
-      <div class="container">
-        <div class="row text-center">
-          <div class="col-md-4">
-            <i class="bi bi-book-half display-5 text-primary"></i>
 
-            <h4 class="mt-3">Bài học</h4>
+        <div class="container">
 
-            <p>Nội dung bám sát chương trình Tin học THPT.</p>
-          </div>
+            <div class="text-center mb-5">
 
-          <div class="col-md-4">
-            <i class="bi bi-question-circle display-5 text-success"></i>
+                <h2 class="fw-bold text-primary">
 
-            <h4 class="mt-3">Ôn tập</h4>
+                    Giới thiệu Chủ đề D
 
-            <p>Câu hỏi trắc nghiệm có chấm điểm tự động.</p>
-          </div>
+                </h2>
 
-          <div class="col-md-4">
-            <i class="bi bi-shield-lock display-5 text-danger"></i>
+                <p class="text-muted w-75 mx-auto">
 
-            <h4 class="mt-3">Công dân số</h4>
+                    Chủ đề D giúp học sinh hiểu rõ về đạo đức, pháp luật và văn hóa
+                    trong môi trường số. Qua bài học, học sinh biết sử dụng Internet
+                    đúng mục đích, tôn trọng người khác, bảo vệ dữ liệu cá nhân và
+                    hình thành trách nhiệm của một công dân số.
 
-            <p>Học tập, sử dụng Internet an toàn và có trách nhiệm.</p>
-          </div>
+                </p>
+
+            </div>
+
+            <div class="row g-4">
+
+                <div class="col-md-4">
+
+                    <div class="card h-100 shadow-sm feature-card">
+
+                        <div class="card-body text-center">
+
+                            <i class="bi bi-shield-lock-fill display-4 text-primary"></i>
+
+                            <h4 class="mt-3">
+
+                                An toàn số
+
+                            </h4>
+
+                            <p>
+
+                                Trang bị kiến thức bảo vệ tài khoản, dữ liệu cá nhân,
+                                phòng tránh lừa đảo trực tuyến và sử dụng Internet an toàn.
+
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <div class="col-md-4">
+
+                    <div class="card h-100 shadow-sm feature-card">
+
+                        <div class="card-body text-center">
+
+                            <i class="bi bi-people-fill display-4 text-success"></i>
+
+                            <h4 class="mt-3">
+
+                                Công dân số
+
+                            </h4>
+
+                            <p>
+
+                                Rèn luyện ý thức sử dụng công nghệ đúng mục đích,
+                                có trách nhiệm với cộng đồng và xã hội.
+
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <div class="col-md-4">
+
+                    <div class="card h-100 shadow-sm feature-card">
+
+                        <div class="card-body text-center">
+
+                            <i class="bi bi-globe2 display-4 text-danger"></i>
+
+                            <h4 class="mt-3">
+
+                                Văn hóa số
+
+                            </h4>
+
+                            <p>
+
+                                Xây dựng văn hóa giao tiếp văn minh, lịch sự,
+                                tôn trọng và chia sẻ thông tin có trách nhiệm
+                                trên môi trường số.
+
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
         </div>
-      </div>
+
     </section>
 
-    <footer class="bg-dark text-white py-5">
-      <div class="container">
-        <div class="row gy-4">
-          <div class="col-lg-4">
-            <h4>
-              <img
-                src="images/logo.png"
-                width="40"
-                class="me-2 rounded-circle"
-                alt="Logo"
-              />
+  <section class="py-5">
 
-              Chủ đề D
-            </h4>
+        <div class="container">
 
-            <p>
-              Website bài giảng Tin học THPT
+            <div class="row align-items-center">
 
-              <br />
+                <div class="col-lg-6">
 
-              Đạo đức, pháp luật và văn hóa trong môi trường số.
-            </p>
-          </div>
+                    <img src="images/ethics.jpg"
+                        alt="Đạo đức số"
+                        class="img-fluid rounded-4 shadow">
 
-          <div class="col-lg-4">
-            <h5>Điều hướng</h5>
+                </div>
 
-            <ul class="list-unstyled">
-              <li>
-                <a href="index.html" class="text-white text-decoration-none">
-                  Trang chủ
-                </a>
-              </li>
+                <div class="col-lg-6 mt-4 mt-lg-0">
 
-              <li>
-                <a href="lesson.html" class="text-white text-decoration-none">
-                  Bài giảng
-                </a>
-              </li>
+                    <h2 class="fw-bold text-primary mb-4">
 
-              <li>
-                <a href="quiz.html" class="text-white text-decoration-none">
-                  Ôn tập
-                </a>
-              </li>
+                        Mục tiêu bài học
 
-              <li>
-                <a href="glossary.html" class="text-white text-decoration-none">
-                  Thuật ngữ
-                </a>
-              </li>
+                    </h2>
 
-              <li>
-                <a href="contact.html" class="text-white text-decoration-none">
-                  Liên hệ
-                </a>
-              </li>
-            </ul>
-          </div>
+                    <ul class="list-group shadow">
 
-          <div class="col-lg-4">
-            <h5>Thông tin nhóm</h5>
+                        <li class="list-group-item">
 
-            <p>
-              <i class="bi bi-building"></i>
+                            <i class="bi bi-check-circle-fill text-success me-2"></i>
 
-              Nhóm 6
+                            Hiểu khái niệm đạo đức số và văn hóa số.
 
-              <br />
+                        </li>
 
-              Trường Đại học Tây Bắc
-            </p>
+                        <li class="list-group-item">
 
-            <p>
-              <i class="bi bi-envelope-fill"></i>
+                            <i class="bi bi-check-circle-fill text-success me-2"></i>
 
-              thietdm.k66sptin@utb.edu.vn
-            </p>
+                            Nhận biết các quy định của pháp luật khi tham gia môi trường số.
 
-            <p>
-              <i class="bi bi-geo-alt-fill"></i>
+                        </li>
 
-              Thành phố Sơn La
-            </p>
-          </div>
+                        <li class="list-group-item">
+
+                            <i class="bi bi-check-circle-fill text-success me-2"></i>
+
+                            Biết cách bảo vệ thông tin cá nhân và dữ liệu số.
+
+                        </li>
+
+                        <li class="list-group-item">
+
+                            <i class="bi bi-check-circle-fill text-success me-2"></i>
+
+                            Hình thành kỹ năng ứng xử văn minh trên Internet.
+
+                        </li>
+
+                        <li class="list-group-item">
+
+                            <i class="bi bi-check-circle-fill text-success me-2"></i>
+
+                            Trở thành công dân số có trách nhiệm với cộng đồng.
+
+                        </li>
+
+                    </ul>
+
+                </div>
+
+            </div>
+
         </div>
 
-        <hr />
+    </section>
+  
+    <section class="py-5 bg-light">
 
-        <div class="text-center">
-          <p class="mb-1">© 2026 Nhóm 6 - Website bài giảng Tin học THPT</p>
+        <div class="container">
 
-          <small>
-            Chủ đề D: Đạo đức, pháp luật và văn hóa trong môi trường số.
-          </small>
+            <div class="text-center mb-5">
+
+                <h2 class="fw-bold text-primary">
+                    Nội dung bài học
+                </h2>
+
+                <p class="text-muted">
+                    Sáu nội dung trọng tâm của Chủ đề D trong chương trình Tin học THPT.
+                </p>
+
+            </div>
+
+            <div class="row g-4">
+
+                <div class="col-md-4">
+
+                    <div class="card h-100 shadow-sm lesson-card">
+
+                        <div class="card-body">
+
+                            <i class="bi bi-laptop display-5 text-primary"></i>
+
+                            <h5 class="mt-3 fw-bold">
+                                1. Môi trường số
+                            </h5>
+
+                            <p>
+                                Tìm hiểu khái niệm môi trường số, vai trò của Internet
+                                và công nghệ số trong học tập, làm việc và cuộc sống.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <div class="col-md-4">
+
+                    <div class="card h-100 shadow-sm lesson-card">
+
+                        <div class="card-body">
+
+                            <i class="bi bi-heart-fill display-5 text-danger"></i>
+
+                            <h5 class="mt-3 fw-bold">
+                                2. Đạo đức số
+                            </h5>
+
+                            <p>
+                                Hình thành ý thức ứng xử văn minh, trung thực,
+                                tôn trọng người khác khi tham gia môi trường số.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <div class="col-md-4">
+
+                    <div class="card h-100 shadow-sm lesson-card">
+
+                        <div class="card-body">
+
+                            <i class="bi bi-bank display-5 text-success"></i>
+
+                            <h5 class="mt-3 fw-bold">
+                                3. Pháp luật số
+                            </h5>
+
+                            <p>
+                                Tìm hiểu các quy định của pháp luật về bản quyền,
+                                quyền riêng tư và trách nhiệm khi sử dụng Internet.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <div class="col-md-4">
+
+                    <div class="card h-100 shadow-sm lesson-card">
+
+                        <div class="card-body">
+
+                            <i class="bi bi-chat-dots-fill display-5 text-warning"></i>
+
+                            <h5 class="mt-3 fw-bold">
+                                4. Văn hóa số
+                            </h5>
+
+                            <p>
+                                Xây dựng văn hóa giao tiếp tích cực,
+                                chia sẻ thông tin đúng sự thật và tôn trọng cộng đồng.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <div class="col-md-4">
+
+                    <div class="card h-100 shadow-sm lesson-card">
+
+                        <div class="card-body">
+
+                            <i class="bi bi-shield-lock-fill display-5 text-info"></i>
+
+                            <h5 class="mt-3 fw-bold">
+                                5. Bảo vệ dữ liệu
+                            </h5>
+
+                            <p>
+                                Sử dụng mật khẩu mạnh, xác thực hai lớp,
+                                bảo vệ tài khoản và dữ liệu cá nhân.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <div class="col-md-4">
+
+                    <div class="card h-100 shadow-sm lesson-card">
+
+                        <div class="card-body">
+
+                            <i class="bi bi-globe2 display-5 text-primary"></i>
+
+                            <h5 class="mt-3 fw-bold">
+                                6. Công dân số
+                            </h5>
+
+                            <p>
+                                Hình thành kỹ năng sử dụng công nghệ
+                                an toàn, hiệu quả và có trách nhiệm.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
         </div>
-      </div>
+
+    </section>
+
+    <section class="py-5">
+
+        <div class="container">
+
+            <div class="text-center mb-5">
+
+                <h2 class="fw-bold text-primary">
+
+                    Video bài giảng
+
+                </h2>
+
+                <p class="text-muted">
+
+                    Video giới thiệu tổng quan về đạo đức, pháp luật
+                    và văn hóa trong môi trường số.
+
+                </p>
+
+            </div>
+
+            <div class="row justify-content-center">
+
+                <div class="col-lg-8">
+
+                    <div class="ratio ratio-16x9 shadow rounded">
+
+                        <iframe
+
+                            src="https://www.youtube.com/embed/aqz-KE-bpKQ"
+
+                            title="Video bài giảng"
+
+                            allowfullscreen>
+
+                        </iframe>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+  
+    <section class="py-5 bg-light">
+
+        <div class="container">
+
+            <h2 class="text-center fw-bold text-primary mb-5">
+
+                Câu hỏi thường gặp
+
+            </h2>
+
+            <div class="accordion" id="faq">
+
+                <div class="accordion-item">
+
+                    <h2 class="accordion-header">
+
+                        <button
+                            class="accordion-button"
+                            data-bs-toggle="collapse"
+                            data-bs-target="#faq1">
+
+                            Đạo đức số là gì?
+
+                        </button>
+
+                    </h2>
+
+                    <div
+                        id="faq1"
+                        class="accordion-collapse collapse show"
+                        data-bs-parent="#faq">
+
+                        <div class="accordion-body">
+
+                            Đạo đức số là các chuẩn mực ứng xử đúng đắn,
+                            trung thực, tôn trọng và có trách nhiệm khi
+                            sử dụng công nghệ số.
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <div class="accordion-item">
+
+                    <h2 class="accordion-header">
+
+                        <button
+                            class="accordion-button collapsed"
+                            data-bs-toggle="collapse"
+                            data-bs-target="#faq2">
+
+                            Làm thế nào để bảo vệ thông tin cá nhân?
+
+                        </button>
+
+                    </h2>
+
+                    <div
+                        id="faq2"
+                        class="accordion-collapse collapse"
+                        data-bs-parent="#faq">
+
+                        <div class="accordion-body">
+
+                            Không chia sẻ mật khẩu, sử dụng xác thực hai lớp,
+                            cập nhật phần mềm thường xuyên và không truy cập
+                            các liên kết không rõ nguồn gốc.
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <div class="accordion-item">
+
+                    <h2 class="accordion-header">
+
+                        <button
+                            class="accordion-button collapsed"
+                            data-bs-toggle="collapse"
+                            data-bs-target="#faq3">
+
+                            Công dân số cần có những kỹ năng gì?
+
+                        </button>
+
+                    </h2>
+
+                    <div
+                        id="faq3"
+                        class="accordion-collapse collapse"
+                        data-bs-parent="#faq">
+
+                        <div class="accordion-body">
+
+                            Biết sử dụng công nghệ an toàn,
+                            tôn trọng pháp luật, bảo vệ dữ liệu cá nhân,
+                            ứng xử văn minh và có trách nhiệm trên môi trường số.
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+ 
+    <section class="py-5 bg-primary text-white text-center">
+
+        <div class="container">
+
+            <h2 class="fw-bold">
+                Hãy trở thành công dân số văn minh!
+            </h2>
+
+            <p class="lead mt-3">
+                Cùng xây dựng môi trường số an toàn, lành mạnh,
+                tôn trọng pháp luật và lan tỏa những giá trị tích cực.
+            </p>
+
+            <a href="quiz.html" class="btn btn-warning btn-lg mt-3">
+
+                <i class="bi bi-pencil-square"></i>
+
+                Làm bài ôn tập
+
+            </a>
+
+        </div>
+
+    </section>
+
+    <section class="py-5 bg-light">
+
+        <div class="container">
+
+            <div class="row text-center">
+
+                <div class="col-md-4 mb-4">
+
+                    <i class="bi bi-book-half display-4 text-primary"></i>
+
+                    <h4 class="mt-3">
+                        Bài giảng
+                    </h4>
+
+                    <p>
+                        Nội dung bám sát chương trình Tin học THPT,
+                        trình bày ngắn gọn, dễ hiểu.
+                    </p>
+
+                </div>
+
+                <div class="col-md-4 mb-4">
+
+                    <i class="bi bi-patch-check-fill display-4 text-success"></i>
+
+                    <h4 class="mt-3">
+                        Ôn tập trực tuyến
+                    </h4>
+
+                    <p>
+                        Hệ thống câu hỏi trắc nghiệm
+                        chấm điểm và hiển thị kết quả tự động.
+                    </p>
+
+                </div>
+
+                <div class="col-md-4 mb-4">
+
+                    <i class="bi bi-shield-lock-fill display-4 text-danger"></i>
+
+                    <h4 class="mt-3">
+                        An toàn số
+                    </h4>
+
+                    <p>
+                        Trang bị kỹ năng bảo vệ tài khoản,
+                        dữ liệu và thông tin cá nhân.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <footer class="bg-dark text-white pt-5 pb-3">
+
+        <div class="container">
+
+            <div class="row gy-4">
+
+                <div class="col-lg-4">
+
+                    <h4 class="fw-bold">
+
+                        <img
+                            src="images/logo.png"
+                            width="40"
+                            class="rounded-circle me-2"
+                            alt="Logo"
+                        >
+
+                        Chủ đề D
+
+                    </h4>
+
+                    <p class="mt-3">
+
+                        Website bài giảng Tin học THPT
+
+                        <br>
+
+                        Chủ đề D:
+                        Đạo đức, pháp luật và văn hóa trong môi trường số.
+
+                    </p>
+
+                </div>
+
+                <div class="col-lg-4">
+
+                    <h5 class="fw-bold">
+                        Điều hướng
+                    </h5>
+
+                    <ul class="list-unstyled mt-3">
+
+                        <li class="mb-2">
+                            <a href="index.html" class="text-white text-decoration-none">
+                                Trang chủ
+                            </a>
+                        </li>
+
+                        <li class="mb-2">
+                            <a href="lesson.html" class="text-white text-decoration-none">
+                                Bài giảng
+                            </a>
+                        </li>
+
+                        <li class="mb-2">
+                            <a href="quiz.html" class="text-white text-decoration-none">
+                                Ôn tập
+                            </a>
+                        </li>
+
+                        <li class="mb-2">
+                            <a href="glossary.html" class="text-white text-decoration-none">
+                                Thuật ngữ
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="contact.html" class="text-white text-decoration-none">
+                                Liên hệ
+                            </a>
+                        </li>
+
+                    </ul>
+
+                </div>
+
+                <div class="col-lg-4">
+
+                    <h5 class="fw-bold">
+                        Thông tin nhóm
+                    </h5>
+
+                    <p class="mt-3">
+
+                        <i class="bi bi-people-fill"></i>
+
+                        Nhóm 6 - Trường Đại học Tây Bắc
+
+                    </p>
+
+                    <p>
+
+                        <i class="bi bi-envelope-fill"></i>
+
+                        nhom6@utb.edu.vn
+
+                    </p>
+
+                    <p>
+
+                        <i class="bi bi-geo-alt-fill"></i>
+
+                        Thành phố Sơn La
+
+                    </p>
+
+                </div>
+
+            </div>
+
+            <hr class="my-4">
+
+            <div class="text-center">
+
+                <p class="mb-1">
+
+                    © 2026 Nhóm 6 - Website bài giảng Tin học THPT
+
+                </p>
+
+                <small>
+
+                    Chủ đề D: Đạo đức, pháp luật và văn hóa trong môi trường số.
+
+                </small>
+
+            </div>
+
+        </div>
+
     </footer>
 
-    <button id="backToTop" class="btn btn-primary rounded-circle">
-      <i class="bi bi-arrow-up"></i>
+    <button
+        id="topBtn"
+        class="btn btn-primary rounded-circle position-fixed"
+        style="bottom:25px;right:25px;display:none;z-index:999;"
+    >
+
+        <i class="bi bi-arrow-up"></i>
+
     </button>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
@@ -606,5 +981,7 @@
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
 
     <script src="js/script.js"></script>
-  </body>
+
+</body>
+
 </html>
