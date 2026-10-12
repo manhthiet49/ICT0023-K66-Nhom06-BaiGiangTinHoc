@@ -15,16 +15,19 @@ Website hỗ trợ giáo viên và học sinh THPT học tập Chủ đề C: Đ
 - Thuật ngữ
 - Liên hệ
 5. Các phiên bản
+  
 a. v0.1-y-tuong
 - Xây dựng ý tưởng dự án.
 - Phân tích người dùng.
 - Thiết kế cấu trúc website.
 - Phân công nhiệm vụ.
+  
 b. v0.2-html
 - Hoàn thành 5 trang HTML.
 - Hoàn thiện nội dung.
 - Hoàn thành menu điều hướng.
 - Thêm hình ảnh và bảng biểu.
+  
 c. v0.3-giao-dien
 - Hoàn thiện CSS.
 - Responsive 375px / 768px / 1200px.
@@ -34,6 +37,7 @@ c. v0.3-giao-dien
 - Footer thống nhất.
 - Bootstrap Navbar.
 - Kiểm tra hiển thị ảnh.
+  
   d. v0.4-tuong-tac
 - Thêm JavaScript.
 - Thêm questions.json.
@@ -43,5 +47,6 @@ c. v0.3-giao-dien
 - Nút Làm lại.
 - Validation biểu mẫu.
 - Sử dụng jQuery.
+- 
 6. GitHub Pages
 - Link sẽ cập nhật sau
