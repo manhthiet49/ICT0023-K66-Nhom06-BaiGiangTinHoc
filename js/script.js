@@ -1,92 +1,215 @@
-const quizForm = document.getElementById("quizForm");
-const quizContainer = document.getElementById("quizContainer");
-const submitBtn = document.getElementById("submitBtn");
-const resetBtn = document.getElementById("resetBtn");
-const demoBtn = document.getElementById("demoBtn");
-const result = document.getElementById("result");
+document.addEventListener('DOMContentLoaded', function () 
+
+  const topBtn = document.getElementById('topBtn');
+
+  if (topBtn) {
+    window.addEventListener('scroll', function () {
+      if (window.scrollY > 300) {
+        topBtn.style.display = 'block';
+      } else {
+        topBtn.style.display = 'none';
+      }
+    });
+
+    topBtn.addEventListener('click', function () {
+      window.scrollTo({
+        top: 0,
+
+        behavior: 'smooth',
+      });
+    });
+  }
+
+  const cards = document.querySelectorAll(
+    '.card,.lesson-box,.question-card,.glossary-card'
+  );
+
+  cards.forEach(function (card) {
+    card.classList.add('fadeIn');
+  });
+
+  const clock = document.getElementById('clock');
+
+  function updateClock() {
+    if (!clock) return;
+
+    const now = new Date();
+
+    let h = now.getHours().toString().padStart(2, '0');
+
+    let m = now.getMinutes().toString().padStart(2, '0');
+
+    let s = now.getSeconds().toString().padStart(2, '0');
+
+    clock.innerHTML = h + ':' + m + ':' + s;
+  }
+
+  updateClock();
+
+  setInterval(updateClock, 1000);
+
+  const header = document.querySelector('header');
+
+  if (header) {
+    header.classList.add('slideUp');
+  }
+});
+
+const searchInput = document.getElementById('searchQuestion');
+
+if (searchInput) {
+  searchInput.addEventListener('keyup', function () {
+    const keyword = this.value.toLowerCase().trim();
+
+    const cards = document.querySelectorAll('#glossaryContainer .col-md-4');
+
+    let count = 0;
+
+    cards.forEach(function (item) {
+      const text = item.textContent.toLowerCase();
+
+      if (text.includes(keyword)) {
+        item.style.display = '';
+
+        count++;
+      } else {
+        item.style.display = 'none';
+      }
+    });
+
+    let message = document.getElementById('searchResult');
+
+    if (!message) {
+      message = document.createElement('p');
+
+      message.id = 'searchResult';
+      message.className = 'text-center fw-bold mt-4';
+
+      document
+        .getElementById('glossaryContainer')
+        .insertAdjacentElement('afterend', message);
+    }
+
+    if (keyword === '') {
+      message.innerHTML = '';
+    } else if (count === 0) {
+      message.innerHTML = 'Không tìm thấy thuật ngữ phù hợp.';
+
+      message.className = 'text-center text-danger fw-bold mt-4';
+    } else {
+      message.innerHTML = 'Tìm thấy ' + count + ' thuật ngữ.';
+
+      message.className = 'text-center text-success fw-bold mt-4';
+    }
+  });
+}
+
+const glossaryCards = document.querySelectorAll('.glossary-card');
+
+glossaryCards.forEach(function (card) {
+  card.addEventListener('mouseenter', function () {
+    card.classList.add('shadow');
+  });
+
+  card.addEventListener('mouseleave', function () {
+    card.classList.remove('shadow');
+  });
+});
+
+window.addEventListener('load', function () {
+  glossaryCards.forEach(function (card, index) {
+    setTimeout(function () {
+      card.classList.add('fadeIn');
+    }, index * 100);
+  });
+});
 
 let questions = [];
 
-fetch("./data/questions.json")
-    .then(response => {
+const quizContainer = document.getElementById('quizContainer');
 
-        if (!response.ok) {
-            throw new Error("Không tìm thấy questions.json");
-        }
-
-        return response.json();
-
+if (quizContainer) {
+  fetch('questions.json')
+    .then(function (response) {
+      return response.json();
     })
-    .then(data => {
 
-        questions = data;
+    .then(function (data) {
+      questions = data;
 
-        renderQuiz();
-
+      renderQuiz();
     })
-    .catch(error => {
 
-        console.error(error);
+    .catch(function () {
+      quizContainer.innerHTML = `
 
-        result.classList.remove("d-none");
+                <div class="alert alert-danger text-center">
 
-        result.innerHTML = `
-        <div class="alert alert-danger">
+                    Không thể tải file questions.json
 
-            <h5>Lỗi</h5>
+                </div>
 
-            Không tải được dữ liệu câu hỏi.
-
-            <br>
-
-            Kiểm tra lại thư mục
-            <strong>data/questions.json</strong>
-
-        </div>
-        `;
-
+            `;
     });
+}
 
 function renderQuiz() {
+  if (!quizContainer) return;
 
-    let html = "";
+  quizContainer.innerHTML = '';
 
-    questions.forEach((q, index) => {
+  questions.forEach(function (q, index) {
+    let html = `
 
-        html += `
-
-        <div class="card shadow-sm mb-4">
+        <div class="card question-card shadow mb-4">
 
             <div class="card-body">
 
-                <h5 class="mb-3">
+                <h5 class="fw-bold mb-3">
 
                     Câu ${index + 1}. ${q.question}
 
                 </h5>
 
-                ${q.answers.map((answer, i) => `
+        `;
 
-                    <div class="form-check mb-2">
+    q.options.forEach(function (option, i) {
+      html += `
 
-                        <input
-                            class="form-check-input"
-                            type="radio"
-                            id="q${index}_${i}"
-                            name="q${index}"
-                            value="${i}">
+            <div class="form-check mb-2">
 
-                        <label
-                            class="form-check-label"
-                            for="q${index}_${i}">
+                <input
 
-                            ${answer}
+                    class="form-check-input"
 
-                        </label>
+                    type="radio"
 
-                    </div>
+                    name="q${index}"
 
-                `).join("")}
+                    id="q${index}_${i}"
+
+                    value="${i}"
+
+                >
+
+                <label
+
+                    class="form-check-label"
+
+                    for="q${index}_${i}"
+
+                >
+
+                    ${option}
+
+                </label>
+
+            </div>
+
+            `;
+    });
+
+    html += `
 
             </div>
 
@@ -94,201 +217,162 @@ function renderQuiz() {
 
         `;
 
+    quizContainer.innerHTML += html;
+  });
+}
+
+const submitBtn = document.getElementById('submitBtn');
+const resetBtn = document.getElementById('resetBtn');
+const demoBtn = document.getElementById('demoBtn');
+
+const resultBox = document.getElementById('resultBox');
+const scoreText = document.getElementById('scoreText');
+const scoreBar = document.getElementById('scoreBar');
+const message = document.getElementById('message');
+
+if (submitBtn) {
+  submitBtn.addEventListener('click', function (e) {
+    e.preventDefault();
+
+    let score = 0;
+
+    questions.forEach(function (q, index) {
+      const answer = document.querySelector(
+        'input[name="q' + index + '"]:checked'
+      );
+
+      if (answer && Number(answer.value) === q.answer) {
+        score++;
+      }
     });
 
-    quizContainer.innerHTML = html;
+    const total = questions.length;
 
+    const percent = Math.round((score / total) * 100);
+
+    resultBox.classList.remove('d-none');
+
+    scoreText.innerHTML = score + ' / ' + total;
+
+    scoreBar.style.width = percent + '%';
+
+    scoreBar.innerHTML = percent + '%';
+
+    if (percent >= 90) {
+      message.className = 'alert alert-success';
+
+      message.innerHTML = '🎉 Xuất sắc! Bạn đã nắm rất vững kiến thức.';
+    } else if (percent >= 70) {
+      message.className = 'alert alert-info';
+
+      message.innerHTML = '👍 Kết quả tốt! Chỉ cần ôn thêm một chút.';
+    } else if (percent >= 50) {
+      message.className = 'alert alert-warning';
+
+      message.innerHTML = '⚠ Bạn nên xem lại bài giảng trước khi làm lại.';
+    } else {
+      message.className = 'alert alert-danger';
+
+      message.innerHTML = '❌ Bạn cần ôn tập lại toàn bộ bài học.';
+    }
+
+    resultBox.scrollIntoView({
+      behavior: 'smooth',
+    });
+  });
+}
+
+if (resetBtn) {
+  resetBtn.addEventListener('click', function (e) {
+    e.preventDefault();
+
+    document.getElementById('quizForm').reset();
+
+    resultBox.classList.add('d-none');
+
+    scoreBar.style.width = '0%';
+
+    scoreBar.innerHTML = '0%';
+
+    scoreText.innerHTML = '0 / ' + questions.length;
+  });
 }
 
 if (demoBtn) {
+  demoBtn.addEventListener('click', function (e) {
+    e.preventDefault();
 
-    demoBtn.addEventListener("click", () => {
+    questions.forEach(function (q, index) {
+      const radio = document.getElementById('q' + index + '_' + q.answer);
 
-        questions.forEach((q, index) => {
-
-            const radios = document.getElementsByName(`q${index}`);
-
-            if (radios.length > 0) {
-
-                radios[q.correct].checked = true;
-
-            }
-
-        });
-
+      if (radio) {
+        radio.checked = true;
+      }
     });
-
+  });
 }
 
-submitBtn.addEventListener("click", () => {
+const contactForm = document.getElementById('contactForm');
 
-    let score = 0;
-    let answered = 0;
-    let explainHTML = "";
+if (contactForm) {
+  contactForm.addEventListener('submit', function (e) {
+    e.preventDefault();
 
-    questions.forEach((q, index) => {
+    const name = document.getElementById('name');
+    const email = document.getElementById('email');
+    const role = document.getElementById('role');
+    const messageInput = document.getElementById('message');
 
-        const choose = document.querySelector(
-            `input[name="q${index}"]:checked`
-        );
+    const nameError = document.getElementById('nameError');
+    const emailError = document.getElementById('emailError');
+    const messageError = document.getElementById('messageError');
 
-        if (choose) {
+    const successMessage = document.getElementById('successMessage');
 
-            answered++;
+    nameError.textContent = '';
+    emailError.textContent = '';
+    messageError.textContent = '';
 
-            const userAnswer = Number(choose.value);
+    let valid = true;
 
-            if (userAnswer === q.correct) {
+    if (name.value.trim() === '') {
+      nameError.textContent = 'Vui lòng nhập họ và tên.';
 
-                score++;
-
-                explainHTML += `
-                <div class="alert alert-success mt-3">
-
-                    <strong>Câu ${index + 1}: Đúng</strong>
-
-                    <br>
-
-                    ${q.explain}
-
-                </div>
-                `;
-
-            } else {
-
-                explainHTML += `
-                <div class="alert alert-danger mt-3">
-
-                    <strong>Câu ${index + 1}: Sai</strong>
-
-                    <br>
-
-                    Đáp án đúng:
-                    <strong>${q.answers[q.correct]}</strong>
-
-                    <br>
-
-                    ${q.explain}
-
-                </div>
-                `;
-
-            }
-
-        }
-
-    });
-
-    result.classList.remove("d-none");
-
-    if (answered !== questions.length) {
-
-        result.innerHTML = `
-        <div class="alert alert-warning">
-
-            <h5>Bạn chưa hoàn thành bài.</h5>
-
-            Vui lòng trả lời đủ
-            <strong>${questions.length}</strong>
-            câu hỏi.
-
-        </div>
-        `;
-
-        return;
-
+      valid = false;
     }
 
-    let level = "";
+    const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
-    if (score === questions.length) {
+    if (!emailPattern.test(email.value.trim())) {
+      emailError.textContent = 'Email không hợp lệ.';
 
-        level = "🌟 Xuất sắc";
-
-    } else if (score >= 5) {
-
-        level = "👍 Tốt";
-
-    } else if (score >= 3) {
-
-        level = "🙂 Đạt";
-
-    } else {
-
-        level = "📚 Cần ôn tập thêm";
-
+      valid = false;
     }
 
-    result.innerHTML = `
+    if (messageInput.value.trim().length < 10) {
+      messageError.textContent = 'Nội dung phải có ít nhất 10 ký tự.';
 
-    <div class="alert alert-primary">
+      valid = false;
+    }
 
-        <h3>Kết quả bài làm</h3>
+    if (!valid) return;
 
-        <hr>
+    successMessage.classList.remove('d-none');
 
-        <p>
+    contactForm.reset();
 
-            <strong>Điểm:</strong>
+    setTimeout(function () {
+      successMessage.classList.add('d-none');
+    }, 3000);
+  });
+}
 
-            ${score}/${questions.length}
-
-        </p>
-
-        <p>
-
-            <strong>Đánh giá:</strong>
-
-            ${level}
-
-        </p>
-
-    </div>
-
-    ${explainHTML}
-
-    `;
-
+$('input, textarea, select').on('focus', function () {
+  $(this).addClass('shadow');
 });
 
-resetBtn.addEventListener("click", () => {
-
-    quizForm.reset();
-
-    result.classList.add("d-none");
-
-    result.innerHTML = "";
-
+$('input, textarea, select').on('blur', function () {
+  $(this).removeClass('shadow');
 });
 
-$(document).ready(function () {
-
-    $(document).on("mouseenter", ".card", function () {
-
-        $(this).addClass("shadow-lg");
-
-    });
-
-    $(document).on("mouseleave", ".card", function () {
-
-        $(this).removeClass("shadow-lg");
-
-    });
-
-    $(".btn").hover(
-
-        function () {
-
-            $(this).addClass("shadow");
-
-        },
-
-        function () {
-
-            $(this).removeClass("shadow");
-
-        }
-
-    );
-
-});
+console.log('Website Chủ đề D đã tải thành công.');
