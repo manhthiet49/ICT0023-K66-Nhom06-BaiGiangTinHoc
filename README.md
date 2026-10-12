@@ -34,7 +34,7 @@ c. v0.3-giao-dien
 - Footer thống nhất.
 - Bootstrap Navbar.
 - Kiểm tra hiển thị ảnh.
-  . v0.4-tuong-tac
+  d. v0.4-tuong-tac
 - Thêm JavaScript.
 - Thêm questions.json.
 - Tạo bài trắc nghiệm.
