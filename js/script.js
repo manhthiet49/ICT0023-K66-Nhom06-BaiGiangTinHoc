@@ -182,7 +182,7 @@ const quizContainer = document.getElementById("quizContainer");
 
 if (quizContainer) {
 
-    fetch("questions.json")
+    fetch("data/questions.json")
 
         .then(function (response) {
 
