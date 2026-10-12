@@ -685,3 +685,29 @@ img:hover {
 .show {
   display: block;
 }
+
+#result{
+    display:none;
+}
+
+#result.show{
+    display:block;
+}
+
+.correct{
+    color:#198754;
+    font-weight:bold;
+}
+
+.wrong{
+    color:#dc3545;
+    font-weight:bold;
+}
+
+.question-card.correct-answer{
+    border:2px solid #198754;
+}
+
+.question-card.wrong-answer{
+    border:2px solid #dc3545;
+}
